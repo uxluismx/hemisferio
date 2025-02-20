@@ -1,0 +1,110 @@
+:root {
+  --font-family-display: "Geist", sans-serif;
+  --font-family-body: "Sora", sans-serif;
+  --font-family-accent: "IBM Plex Serif", serif;
+
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-size-0: 0.625rem;
+  --font-size-1: 0.75rem;
+  --font-size-2: 0.875rem;
+  --font-size-3: 1rem;
+  --font-size-4: 1.125rem;
+  --font-size-5: 1.25rem;
+  --font-size-6: 1.5rem;
+  --font-size-7: 1.75rem;
+  --font-size-8: 2rem;
+  --font-size-9: 2.5rem;
+  --font-size-10: 3rem;
+  --font-size-11: 3.5rem;
+
+  --line-height-normal: 150%;
+  --line-height-tight: 125%;
+
+  --letter-spacing-tight: -2%;
+  --letter-spacing-normal: -1%;
+  --letter-spacing-wide: 0%;
+}
+
+/* Typography Classes */
+.body-large {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.body-large-bold {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.body-normal {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.body-normal-bold {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.display-large {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-9);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.display-medium {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-7);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.display-small {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.accent-large {
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-9);
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.accent-medium {
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-7);
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.accent-small {
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-wide);
+}
