@@ -1,37 +1,66 @@
 :root {
   /* BORDER STYLES*/
-  --border-radius-x-small: 0.5rem;
-  --border-radius-small: 0.75rem;
-  --border-radius-medium: 1rem;
-  --border-radius-large: 1.5rem;
-  --border-radius-x-large: 2.5rem;
-  --border-radius-full: 62.438rem;
+  --radii-x-small: 0.5rem;
+  --radii-small: 0.75rem;
+  --radii-medium: 1rem;
+  --radii-xmedium: 1.25rem;
+  --radii-large: 1.5rem;
+  --radii-x-large: 2.5rem;
+  --radii-full: 62.438rem;
 
-  --border-weight-x-small: 0.5px;
-  --border-weight-small: 1px;
-  --border-weight-medium: 1.5px;
-  --border-weight-large: 2px;
-  --border-weight-x-large: 3px;
+  --stroke-x-small: 0.5px;
+  --stroke-small: 1px;
+  --stroke-medium: 1.5px;
+  --stroke-large: 2px;
+  --stroke-x-large: 3px;
 
   /* SHADOWS */
-  --shadow-small:
-    2px 2px 4px 0 rgba(224, 227, 237, 0.24),
-    1px 1px 2px 0 rgba(224, 227, 237, 0.24);
-  --shadow-normal:
-    2px 2px 6px 0 rgba(200, 205, 223, 0.43),
-    1px 1px 2px 0 rgba(224, 227, 237, 0.24);
-  --shadow-medium:
-    3px 3px 10px -2px rgba(176, 183, 208, 0.53),
-    4px 4px 12px -4px rgba(200, 205, 223, 0.43),
-    2px 2px 4px 0 rgba(224, 227, 237, 0.24);
+  --drop-shadow-small:
+    2px 2px 4px 0 var(--gray-opacity-100),
+    1px 1px 2px 0 var(--gray-opacity-100);
+
+  --drop-shadow-normal:
+    2px 2px 6px 0 var(--gray-opacity-200),
+    1px 1px 2px 0 var(--gray-opacity-100);
+
+  --drop-shadow-medium:
+    3px 3px 10px -2px var(--gray-opacity-300),
+    4px 4px 12px -4px var(--gray-opacity-200),
+    2px 2px 4px 0 var(--gray-opacity-100);
+
+  /* INNER SHADOWS */
+  --inner-shadow-normal:
+    inset -2px -2px 4px 0 var(--on-surface-low),
+    inset 2px 4px 8px 0 var(--gray-opacity-200),
+    inset 1px 2px 4px 0 var(--gray-opacity-100),
+    inset 1px 1px 2px 0 var(--gray-opacity-300);
+
+  --inner-shadow-medium:
+    inset -1px -1px 8px 0 var(--on-surface-low),
+    inset -1px -1px 6px -2px var(--on-surface-low),
+    inset 4px 4px 14px 0 var(--gray-opacity-300),
+    inset 1px 1px 8px -2px var(--gray-opacity-100),
+    inset 1px 1px 4px 0 var(--gray-opacity-300),
+    inset 1px 1px 2px 0 var(--gray-opacity-300);
 
   /* CUSTOM SHADOWS */
   --shadow-button:
     inset 8px 8px 10px -2px rgba(4, 16, 46, 0.16),
     inset -4px 4px 4px -2px rgba(4, 16, 46, 0.16),
     inset -6px -8px 8px -6px rgba(4, 16, 46, 0.16);
+
   --shadow-icon-button:
     inset 0 8px 10px -2px rgba(4, 16, 46, 0.16),
     inset 0 4px 4px -2px rgba(4, 16, 46, 0.16),
     inset 0 -8px 8px -6px rgba(4, 16, 46, 0.16);
+
+  /* BREAKPOINTS & SIZES */
+  --breakpoint-max-width-body: 90rem;
+  --breakpoint-max-width-container: 67.5rem;
+  --breakpoint-max-width-small: 55rem;
+
+  --padding-inline-father-container: 4rem;
+  --padding-block-father-container: 10rem;
+
+  --gap-container: 1.5rem;
 }

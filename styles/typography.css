@@ -65,7 +65,6 @@ p,
 a,
 button {
   font-family: var(--font-family-body);
-  line-height: var(--line-height-normal);
   letter-spacing: var(--letter-spacing-tight);
 }
 
@@ -73,31 +72,37 @@ button {
 .body-large {
   font-size: var(--font-size-body-5);
   font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
 }
 
 .body-large-bold {
   font-size: var(--font-size-body-5);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
 }
 
 .body-normal {
   font-size: var(--font-size-body-4);
   font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
 }
 
 .body-normal-bold {
   font-size: var(--font-size-body-4);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
 }
 
 .body-small {
   font-size: var(--font-size-body-3);
   font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
 }
 
 .body-small-bold {
   font-size: var(--font-size-body-3);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
 }
 
 .body-xsmall {

@@ -1,0 +1,64 @@
+/* BUTTONS */
+.button {
+    display: inline-flex;
+    height: 3rem;
+    position: relative;
+    border-radius: var(--radii-xmedium, 1.25rem);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.button.cta {
+    padding-inline: 1rem;
+    gap: 0.5rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        border-radius: var(--radii-medium);
+    }
+
+    span {
+        padding-inline: .25rem;
+        color: var(--color);
+    }
+
+    .icon {
+        --url: url(../assets/icons/cv-file-document.svg);
+
+        position: relative;
+        width: 1.5rem;
+        aspect-ratio: 1/1;
+        background: var(--color);
+        background-repeat: no-repeat;
+        mask-image: var(--url);
+        -webkit-mask-image: var(--url);
+        mask-size: contain;
+        -webkit-mask-size: contain;
+    }
+
+    &.blue {
+        --color: var(--blue-50);
+        background: var(--blue-500, #1351DF);
+        border: var(--stroke-large, 2px) solid var(--blue-300, #618EF1);
+
+        &::before {
+            box-shadow:
+                inset 8px 8px 10px -2px #0017ACF1,
+                inset -4px 4px 4px -2px #0017ACF1,
+                inset -6px -8px 8px -6px #0017ACF1;
+        }
+    }
+
+    &.gray {
+        --color: var(--primary);
+        background: linear-gradient(180deg, var(--surface) 0%, var(--surface-alt-medium) 100%);
+        border: var(--stroke-large, 2px) solid var(--border-high);
+        box-shadow:
+            2px 2px 6px 0 var(--gray-opacity-200),
+            1px 1px 2px 0 var(--gray-opacity-100);
+    }
+}

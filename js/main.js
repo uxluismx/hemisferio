@@ -20,3 +20,18 @@ AOS.init({
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
+
+// MANIOBRA PARA REEMPLAZAR ICONOS
+document.addEventListener('DOMContentLoaded', () => {
+    const icons = document.querySelectorAll('.button .icon');
+
+    icons.forEach(icon => {
+        const iconClass = Array.from(icon.classList).find(cls => cls.startsWith('icon-'));
+        if (iconClass) {
+            const iconName = iconClass.replace('icon-', '');
+            icon.style.setProperty('--url', `url(../assets/icons/${iconName}.svg)`);
+            icon.style.maskImage = `var(--url)`;
+            icon.style.webkitMaskImage = `var(--url)`;
+        }
+    });
+});
