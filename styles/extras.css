@@ -64,3 +64,42 @@
 
   --gap-container: 1.5rem;
 }
+
+/* CLASES DE SOMBRAS */
+.drop-shadow-small {
+  box-shadow:
+    2px 2px 4px 0 var(--gray-opacity-100),
+    1px 1px 2px 0 var(--gray-opacity-100);
+}
+
+.drop-shadow-normal {
+  box-shadow:
+    2px 2px 6px 0 var(--gray-opacity-200),
+    1px 1px 2px 0 var(--gray-opacity-100);
+}
+
+.drop-shadow-medium {
+  box-shadow:
+    3px 3px 10px -2px var(--gray-opacity-300),
+    4px 4px 12px -4px var(--gray-opacity-200),
+    2px 2px 4px 0 var(--gray-opacity-100);
+}
+
+.inner-shadow-normal {
+  box-shadow:
+    inset -2px -2px 4px 0 var(--on-surface-low),
+    inset 2px 4px 8px 0 var(--gray-opacity-200),
+    inset 1px 2px 4px 0 var(--gray-opacity-100),
+    inset 1px 1px 2px 0 var(--gray-opacity-300);
+}
+
+.inner-shadow-medium {
+  box-shadow:
+    inset -1px -1px 8px 0 var(--on-surface-low),
+    inset -1px -1px 6px -2px var(--on-surface-low),
+    inset 4px 4px 14px 0 var(--gray-opacity-300),
+    inset 1px 1px 8px -2px var(--gray-opacity-100),
+    inset 1px 1px 4px 0 var(--gray-opacity-300),
+    inset 1px 1px 2px 0 var(--gray-opacity-300);
+  ;
+}

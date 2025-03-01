@@ -21,17 +21,37 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 
-// MANIOBRA PARA REEMPLAZAR ICONOS
+// MANIOBRA PARA REEMPLAZAR ICONOS EN CUALQUIER COMPONENTE
 document.addEventListener('DOMContentLoaded', () => {
-    const icons = document.querySelectorAll('.button .icon');
+    // Selecciona todos los elementos que tengan la clase 'icon'
+    const icons = document.querySelectorAll('.icon');
 
     icons.forEach(icon => {
+        // Busca la clase que comience con 'icon-' en la lista de clases del elemento
         const iconClass = Array.from(icon.classList).find(cls => cls.startsWith('icon-'));
+
         if (iconClass) {
+            // Extrae el nombre del ícono removiendo el prefijo 'icon-'
             const iconName = iconClass.replace('icon-', '');
+
+            // Establece la URL del ícono como una variable CSS personalizada
             icon.style.setProperty('--url', `url(../assets/icons/${iconName}.svg)`);
+
+            // Aplica la máscara usando la variable CSS para compatibilidad cross-browser
             icon.style.maskImage = `var(--url)`;
             icon.style.webkitMaskImage = `var(--url)`;
         }
     });
+});
+
+// AGREGAR HEIGHT DEL NAVIGATION AL PADDING-BLOCK-START DEL HERO
+document.addEventListener('DOMContentLoaded', () => {
+    const navigation = document.querySelector('.navigation');
+    const hero = document.querySelector('.hero');
+
+    if (navigation && hero) {
+        const navHeight = navigation.offsetHeight;
+        const remValue = navHeight / 16; // Convert pixels to rem (16px = 1rem)
+        hero.style.setProperty('--height-navigation', `${remValue}rem`);
+    }
 });

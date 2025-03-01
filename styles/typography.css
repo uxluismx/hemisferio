@@ -1,21 +1,18 @@
 @font-face {
   font-family: "Geist";
   font-style: normal;
-  font-weight: 700;
-  src: url(/assets/fonts/GeistBold.ttf) format("truetype");
+  src: url(/assets/fonts/GeistVariable.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "IMB Plex Serif";
   font-style: italic;
-  font-weight: 700;
   src: url(/assets/fonts/IBMPlexSerifBoldItalic.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Sora";
   font-style: normal;
-  font-weight: 500, 700;
   src: url(/assets/fonts/SoraVariable.ttf) format("truetype");
 }
 
@@ -24,7 +21,8 @@
   --font-family-accent: "IBM Plex Serif", serif;
   --font-family-body: "Sora", sans-serif;
 
-  --font-weight-medium: 500;
+  --font-weight-medium: 450;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
   --font-size-body-1: 0.625rem;
@@ -54,10 +52,6 @@
 
   --line-height-normal: 150%;
   --line-height-tight: 125%;
-
-  --letter-spacing-tight: -2%;
-  --letter-spacing-normal: -1%;
-  --letter-spacing-none: 0%;
 }
 
 /* Definiciones de Textos Generales */
@@ -65,7 +59,6 @@ p,
 a,
 button {
   font-family: var(--font-family-body);
-  letter-spacing: var(--letter-spacing-tight);
 }
 
 /* Classes Body */
@@ -73,64 +66,70 @@ button {
   font-size: var(--font-size-body-5);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
+  letter-spacing: -0.0225rem;
 }
 
 .body-large-bold {
   font-size: var(--font-size-body-5);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-normal);
+  letter-spacing: -0.0225rem;
 }
 
 .body-normal {
   font-size: var(--font-size-body-4);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
+  letter-spacing: -.02rem;
 }
 
 .body-normal-bold {
   font-size: var(--font-size-body-4);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-normal);
+  letter-spacing: -.02rem;
 }
 
 .body-small {
   font-size: var(--font-size-body-3);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
+  letter-spacing: -.0175rem;
 }
 
 .body-small-bold {
   font-size: var(--font-size-body-3);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-normal);
+  letter-spacing: -.0175rem;
 }
 
 .body-xsmall {
   font-size: var(--font-size-body-2);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: -.0075rem;
 }
 
 .body-xsmall-bold {
   font-size: var(--font-size-body-2);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: -.0075rem;
 }
 
 .body-mini {
   font-size: var(--font-size-body-1);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: -.00625rem;
 }
 
 .body-mini-bold {
   font-size: var(--font-size-body-1);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: -.00625rem;
 }
 
 /* Definiciones de Títulos */
@@ -143,36 +142,42 @@ h6 {
   font-family: var(--font-family-display);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
 }
 
 /* Classes Display */
 .display-xxlarge {
   font-size: var(--font-size-display-7);
+  letter-spacing: -.07rem;
 }
 
 .display-xlarge {
   font-size: var(--font-size-display-6);
+  letter-spacing: -.06rem;
 }
 
 .display-large {
   font-size: var(--font-size-display-5);
+  letter-spacing: -.05rem;
 }
 
 .display-xmedium {
   font-size: var(--font-size-display-4);
+  letter-spacing: -.04rem;
 }
 
 .display-medium {
   font-size: var(--font-size-display-3);
+  letter-spacing: -.035rem;
 }
 
 .display-small {
   font-size: var(--font-size-display-2);
+  letter-spacing: -.03rem;
 }
 
 .display-smallest {
   font-size: var(--font-size-display-1);
+  letter-spacing: -.025rem;
 }
 
 .accent-xxlarge {
