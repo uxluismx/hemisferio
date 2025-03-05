@@ -14,7 +14,7 @@ AOS.init({
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 120, // offset (in px) from the original trigger point
     delay: 100, // values from 0 to 3000, with step 50ms
-    duration: 1000, // values from 0 to 3000, with step 50ms
+    duration: 800, // values from 0 to 3000, with step 50ms
     easing: 'ease-in-out', // default easing for AOS animations
     once: true, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
@@ -23,23 +23,15 @@ AOS.init({
 
 // MANIOBRA PARA REEMPLAZAR ICONOS EN CUALQUIER COMPONENTE
 document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona todos los elementos que tengan la clase 'icon'
-    const icons = document.querySelectorAll('.icon');
-
-    icons.forEach(icon => {
-        // Busca la clase que comience con 'icon-' en la lista de clases del elemento
-        const iconClass = Array.from(icon.classList).find(cls => cls.startsWith('icon-'));
-
-        if (iconClass) {
-            // Extrae el nombre del ícono removiendo el prefijo 'icon-'
-            const iconName = iconClass.replace('icon-', '');
-
-            // Establece la URL del ícono como una variable CSS personalizada
-            icon.style.setProperty('--url', `url(../assets/icons/${iconName}.svg)`);
-
-            // Aplica la máscara usando la variable CSS para compatibilidad cross-browser
-            icon.style.maskImage = `var(--url)`;
-            icon.style.webkitMaskImage = `var(--url)`;
+    document.querySelectorAll('.icon[class*="icon-"]').forEach(icon => {
+        const iconName = icon.className.match(/icon-([^\s]+)/)?.[1];
+        if (iconName) {
+            const iconUrl = `url(../assets/icons/${iconName}.svg)`;
+            icon.style.cssText = `
+                --url: ${iconUrl};
+                -webkit-mask-image: ${iconUrl};
+                mask-image: ${iconUrl};
+            `;
         }
     });
 });
@@ -54,4 +46,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const remValue = navHeight / 16; // Convert pixels to rem (16px = 1rem)
         hero.style.setProperty('--height-navigation', `${remValue}rem`);
     }
+});
+
+// MANIOBRA PARA REEMPLAZAR IMG EN LOS PROJECT CARDS
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.project-card').forEach(card => {
+        const img = card.querySelector('img');
+        if (img && img.src) {
+            // Extract just the path without the domain
+            const path = new URL(img.src).pathname;
+            // Set it as a CSS variable on the card
+            card.style.setProperty('--url', `url(${path})`);
+        }
+    });
+});
+
+// MANIOBRA PARA ASIGNAR CLASE AL HIJO DIRECTO DE BIG TOGGLE
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.big-toggle').forEach(toggle => {
+        const borderTrick = toggle.querySelector('.toggle-border-trick');
+        if (borderTrick) {
+            const colorClasses = ['gray', 'blue', 'emerald', 'red', 'purple', 'orange']; // Add all possible color classes
+
+            // Find which color class the toggle has
+            const foundColorClass = colorClasses.find(colorClass => toggle.classList.contains(colorClass));
+
+            if (foundColorClass) {
+                borderTrick.classList.add(foundColorClass);
+            }
+        }
+    });
 });

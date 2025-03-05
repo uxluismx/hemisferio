@@ -148,36 +148,43 @@ h6 {
 .display-xxlarge {
   font-size: var(--font-size-display-7);
   letter-spacing: -.07rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .display-xlarge {
   font-size: var(--font-size-display-6);
   letter-spacing: -.06rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .display-large {
   font-size: var(--font-size-display-5);
   letter-spacing: -.05rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .display-xmedium {
   font-size: var(--font-size-display-4);
   letter-spacing: -.04rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .display-medium {
   font-size: var(--font-size-display-3);
   letter-spacing: -.035rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .display-small {
   font-size: var(--font-size-display-2);
   letter-spacing: -.03rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .display-smallest {
   font-size: var(--font-size-display-1);
   letter-spacing: -.025rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 .accent-xxlarge {
