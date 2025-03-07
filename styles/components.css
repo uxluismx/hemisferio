@@ -329,9 +329,9 @@
         top: 0;
         left: 0;
         border-radius: inherit;
-        box-shadow: 1px 1px 4px 0px #51586F inset,
-            1px -2px 2px 0px#CCD0DA inset;
-        mix-blend-mode: multiply;
+        box-shadow: 0px 10px 8px 0px #E1E4EA inset,
+            0px -8px 8px 0px #51586F inset;
+        mix-blend-mode: overlay;
     }
 
     &::after {
@@ -342,9 +342,9 @@
         top: 0;
         left: 0;
         border-radius: inherit;
-        box-shadow: 0px 10px 8px 0px #E1E4EA inset,
-            0px -8px 8px 0px #51586F inset;
-        mix-blend-mode: overlay;
+        box-shadow: 1px 1px 4px 0px #51586F inset,
+            1px -2px 2px 0px #CCD0DA inset;
+        mix-blend-mode: multiply;
     }
 
     .icon {
