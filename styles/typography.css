@@ -191,47 +191,47 @@ h6 {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-display-7);
   font-style: italic;
-  letter-spacing: var(--letter-spacing-none);
+  letter-spacing: 0;
 }
 
 .accent-xlarge {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-display-6);
   font-style: italic;
-  letter-spacing: var(--letter-spacing-none);
+  letter-spacing: 0;
 }
 
 .accent-large {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-display-5);
   font-style: italic;
-  letter-spacing: var(--letter-spacing-none);
+  letter-spacing: 0;
 }
 
 .accent-xmedium {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-display-4);
   font-style: italic;
-  letter-spacing: var(--letter-spacing-none);
+  letter-spacing: 0;
 }
 
 .accent-medium {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-display-3);
   font-style: italic;
-  letter-spacing: var(--letter-spacing-none);
+  letter-spacing: 0;
 }
 
 .accent-small {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-display-2);
   font-style: italic;
-  letter-spacing: var(--letter-spacing-none);
+  letter-spacing: 0;
 }
 
 .accent-smallest {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-display-1);
   font-style: italic;
-  letter-spacing: var(--letter-spacing-none);
+  letter-spacing: 0;
 }
