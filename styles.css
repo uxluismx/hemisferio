@@ -1081,4 +1081,5 @@ section {
 .playlist-about:hover {
     transform: translateY(-4px);
     transition: var(--transition);
+    border-color: var(--emerald-500);
 }
