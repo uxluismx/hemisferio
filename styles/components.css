@@ -352,3 +352,25 @@
         width: 1.75rem;
     }
 }
+
+/* CIRCLE BUTTON */
+.circle-button {
+    --color: var(--primary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radii-xmedium);
+    background: var(--surface-alt-low);
+    border: 2px solid var(--border-high);
+    transition: var(--transition);
+
+    &:hover {
+        background: var(--surface-alt-high);
+        border-color: var(--on-surface-high);
+        transform: translateY(-2px);
+        transition: var(--transition);
+    }
+}
