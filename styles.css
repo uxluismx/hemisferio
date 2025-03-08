@@ -989,3 +989,96 @@ section {
     gap: inherit;
     padding-block: var(--gap-container);
 }
+
+.grids-about {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-container);
+
+    >div,
+    >a {
+        position: relative;
+        overflow: hidden;
+        width: 15rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        justify-content: center;
+        aspect-ratio: 1/1;
+        background: var(--surface);
+        border: 2px solid white;
+        border-radius: var(--radii-x-large);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            aspect-ratio: 1/1;
+            border-radius: var(--radii-full);
+            background: var(--color-blur);
+            filter: blur(104px);
+        }
+
+        * {
+            z-index: 1;
+        }
+    }
+}
+
+.phrase-about {
+    --color-blur: var(--purple-100);
+
+    p {
+        &:last-of-type {
+            color: var(--tertiary);
+        }
+    }
+}
+
+.playlist-about {
+    --color-blur: var(--emerald-100);
+    text-align: center;
+    align-items: center;
+    transition: var(--transition);
+
+    .first-container {
+        position: relative;
+
+        img {
+            border-radius: var(--radii-full);
+            aspect-ratio: 1/1;
+            border: 2px solid white;
+
+            &:first-of-type {
+                width: 4rem;
+            }
+
+            &:last-of-type {
+                width: 1.75rem;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .second-container {
+        flex-direction: column;
+        gap: .5rem;
+
+        p {
+            &:last-of-type {
+                color: var(--tertiary);
+            }
+        }
+    }
+}
+
+.playlist-about:hover {
+    transform: translateY(-4px);
+    transition: var(--transition);
+}
