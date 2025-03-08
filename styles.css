@@ -537,6 +537,8 @@ section {
 
 .cta-card {
     position: relative;
+    min-width: 20rem;
+    max-width: 25rem;
     display: flex;
     align-items: center;
     justify-content: center;
