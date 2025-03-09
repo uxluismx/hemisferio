@@ -14,6 +14,8 @@
 
     --gradient-title: linear-gradient(90deg, var(--quaternary) 0%, var(--zero) 25%, var(--zero) 75%, var(--quaternary) 100%);
     --gradient-title-alt: linear-gradient(90deg, var(--zero) 25%, var(--quaternary) 50%, var(--zero) 75%);
+
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -184,6 +186,7 @@ section {
     width: 100%;
     z-index: 10;
     transition: var(--mini-transition);
+    container-type: inline-size;
 
     .container {
         max-width: 60rem;
@@ -293,7 +296,9 @@ section {
 .hero-phrase {
     gap: .5rem;
     align-items: center;
+    justify-content: center;
     color: var(--tertiary);
+    flex-wrap: wrap;
 }
 
 .hero-avatar {
@@ -456,9 +461,8 @@ section {
 .projects-container {
     width: 100%;
     display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-container);
 }
 
 .project-card {
@@ -470,7 +474,6 @@ section {
     background: var(--surface);
     border: 2px solid var(--on-surface-high);
     border-radius: var(--radii-x-large);
-    overflow: hidden;
     padding: 1.5rem;
     gap: 1rem;
     transition: var(--transition);
@@ -537,6 +540,7 @@ section {
 
 .cta-card {
     position: relative;
+    width: inherit;
     min-width: 20rem;
     max-width: 25rem;
     display: flex;
@@ -669,6 +673,7 @@ section {
     max-width: var(--breakpoint-max-width-small);
     padding: 2px;
     border-radius: calc(var(--radii-x-large) + 2px);
+    container-type: inline-size;
 
     &::before {
         content: '';
@@ -708,13 +713,11 @@ section {
 
     .bg-plan-card {
         position: absolute;
-        top: 0;
-        left: 0;
         width: 45rem;
         aspect-ratio: 1/.88;
         background-image: var(--bg-card);
         background-size: contain;
-        transform: translate(-6.5rem, -12rem);
+        transform: translate(-6.5rem, -13rem);
     }
 
     .bg-texture-plan-card {
@@ -980,6 +983,7 @@ section {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
+                flex-wrap: wrap;
             }
         }
     }
@@ -996,6 +1000,7 @@ section {
     display: flex;
     flex-direction: row;
     gap: var(--gap-container);
+    flex-wrap: wrap;
 
     >div,
     >a {
@@ -1175,5 +1180,247 @@ footer {
         border-color: var(--on-surface-high);
         transform: translateY(-2px);
         transition: var(--transition);
+    }
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE DE LA WEB */
+@media screen and (min-width: 745px) and (max-width: 1128px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        >:nth-child(odd) {
+            justify-self: right;
+        }
+
+        >:nth-child(even) {
+            justify-self: left;
+        }
+    }
+}
+
+@media screen and (max-width: 744px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .cta-card {
+        min-height: 34.375rem;
+    }
+}
+
+@media screen and (max-width: 732px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .navigation {
+        width: 100vw;
+
+        .tabs-container {
+            display: none;
+        }
+
+        .buttons-container {
+            a {
+                span {
+                    display: initial;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    section {
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 604px) {
+    .contents-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 543px) {
+    .boxes-about {
+        align-self: stretch;
+        flex-direction: column;
+
+        >div,
+        >a {
+            width: 100%;
+            aspect-ratio: initial;
+            padding-block: 3rem;
+
+            &::before {
+                opacity: .4;
+            }
+        }
+    }
+
+    .hero-text {
+        text-align: left;
+
+        h1 {
+            justify-content: start;
+        }
+    }
+
+    .hero-buttons {
+        align-self: stretch;
+
+        a {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 452px) {
+    .pill-avatar {
+        h5 {
+            display: none;
+        }
+    }
+}
+
+@container (max-width: 752px) {
+    .plan-card {
+        .graph-plan-card {
+            .graph {
+                &:nth-of-type(1) {
+                    width: 13.75rem;
+                }
+
+                &:nth-of-type(2) {
+                    width: 11.25rem;
+                    translate: 0 -148px;
+                }
+
+                &:nth-of-type(3) {
+                    width: 8.75rem;
+                    translate: 0 -256px;
+                }
+            }
+        }
+    }
+
+    .graph-plan-card {
+        height: 18.5rem;
+    }
+}
+
+@container (max-width: 674px) {
+    header {
+        .buttons-container {
+            a {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@container (max-width: 660px) {
+    .plan-card {
+        .container-plan-card {
+            .main-container-plan-card {
+                flex-direction: column;
+                margin: .5rem;
+                gap: 2rem;
+
+                .graph-plan-card {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    height: auto;
+
+                    >div {
+                        translate: 0;
+                    }
+
+                    >:nth-of-type(1) {
+                        translate: 7.5rem 0;
+                    }
+
+                    >:nth-of-type(3) {
+                        translate: -6.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .business {
+        & .main-container-plan-card {
+            &> :nth-of-type(1) {
+                order: initial;
+            }
+
+            &> :nth-of-type(2) {
+                order: initial;
+            }
+        }
+    }
+}
+
+@container (max-width: 560px) {
+    .plan-card {
+        a {
+            align-self: stretch;
+        }
+    }
+}
+
+@container (max-width: 440px) {
+    .plan-card {
+        .container-plan-card {
+            .main-container-plan-card {
+                margin: 0;
+                gap: 1.5rem;
+            }
+        }
+    }
+
+    header {
+        .buttons-container {
+            .button.cta {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@container (max-width: 384px) {
+    .plan-card {
+        .container-plan-card {
+            .main-container-plan-card {
+                .graph-plan-card {
+                    .graph {
+                        &:nth-of-type(1) {
+                            width: 11.25rem;
+                            translate: 104px 0;
+                        }
+
+                        &:nth-of-type(2) {
+                            width: 8.75rem;
+                        }
+
+                        &:nth-of-type(3) {
+                            width: 6.25rem;
+                            translate: -68px 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

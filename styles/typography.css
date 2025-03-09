@@ -235,3 +235,15 @@ h6 {
   font-style: italic;
   letter-spacing: 0;
 }
+
+/* MEDIA QUERIES PARA RESPONSIVE DE LA WEB */
+@media screen and (max-width: 560px) {
+  :root {
+    --font-size-display-5: 2.25rem;
+    /* 36px */
+    --font-size-display-6: 2.5rem;
+    /* 40px */
+    --font-size-display-7: 2.75rem;
+    /* 44px */
+  }
+}

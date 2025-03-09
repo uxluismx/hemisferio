@@ -103,3 +103,16 @@
     inset 1px 1px 2px 0 var(--gray-opacity-300);
   ;
 }
+
+/* MEDIA QUERIES PARA RESPONSIVE DE LA WEB */
+@media screen and (max-width: 880px) {
+  :root {
+    --padding-inline-father-container: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  :root {
+    --padding-inline-father-container: 1.25rem;
+  }
+}
