@@ -114,5 +114,6 @@
 @media screen and (max-width: 560px) {
   :root {
     --padding-inline-father-container: 1.25rem;
+    --padding-block-father-container: 5rem
   }
 }

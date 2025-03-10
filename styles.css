@@ -67,7 +67,8 @@ section {
     --color: var(--blue-900);
 
     position: relative;
-    width: 27.5rem;
+    width: 100%;
+    max-width: 27.5rem;
     display: flex;
     gap: .5rem;
     padding-block: .75rem;
@@ -76,7 +77,7 @@ section {
     &::before {
         content: '';
         position: absolute;
-        top: -7.5rem;
+        top: -6.5rem;
         left: 0;
         width: 150%;
         aspect-ratio: 1/1;
@@ -265,7 +266,7 @@ section {
         }
 
         .icon {
-            width: 1.25rem;
+            min-width: 1.25rem;
         }
     }
 }
@@ -332,10 +333,13 @@ section {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        row-gap: 1rem;
+        column-gap: 0.625rem;
     }
 
     .avatar {
+        margin-inline: 0.375rem;
+
         &:first-of-type {
             aspect-ratio: 3/2;
         }
@@ -396,7 +400,7 @@ section {
 
 .row-big-pill {
     display: inline-flex;
-    width: 220rem;
+    width: 232rem;
     gap: 1.5rem;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -411,20 +415,21 @@ section {
     &:nth-child(2) {
         --animation-speed: 120s;
         animation: scroll-right var(--animation-speed) linear infinite;
-        width: 183rem;
+        width: 192rem;
         align-self: flex-end;
     }
 }
 
 /* ANIMACION DE SERVICES MINI */
 
-/* @keyframes scroll-left {
+@keyframes scroll-left {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        transform: translateX(calc(-220rem/2));
+        transform: translateX(calc(-232rem/2));
+        /* 232rem es el ancho del contenedor */
     }
 }
 
@@ -434,9 +439,10 @@ section {
     }
 
     100% {
-        transform: translateX(calc(183rem/2));
+        transform: translateX(calc(192rem/2));
+        /* 192rem es el ancho del contenedor */
     }
-} */
+}
 
 /* ESTILOS DE PROJECT CARDS */
 .projects {
@@ -883,7 +889,7 @@ section {
         align-items: center;
 
         .icon {
-            width: 1.25rem;
+            min-width: 1.25rem;
         }
     }
 }
@@ -946,11 +952,11 @@ section {
     .container-plan-card {
         .bg-texture-plan-card {
             rotate: 45deg;
-            width: 200%;
+            width: 500%;
             height: initial;
             top: 0;
             left: 0;
-            transform: translate(-45%, -10%);
+            transform: translate(-45%, -5%);
             aspect-ratio: 1/1;
         }
     }
@@ -977,13 +983,15 @@ section {
                 width: 3rem;
                 height: 3rem;
                 border-radius: var(--radii-medium);
+                margin-inline: 0.5625rem;
             }
 
             >span {
                 display: flex;
                 align-items: center;
-                gap: 1rem;
                 flex-wrap: wrap;
+                row-gap: inherit;
+                column-gap: 0.4375rem;
             }
         }
     }
@@ -1234,8 +1242,10 @@ footer {
 }
 
 @media screen and (max-width: 660px) {
-    section {
-        overflow: hidden;
+
+    .projects,
+    .plans {
+        overflow-x: clip;
     }
 }
 
@@ -1243,6 +1253,54 @@ footer {
     .contents-footer {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .navigation {
+        padding-top: 1rem;
+    }
+
+    .hero {
+        &::before {
+            height: 60rem;
+        }
+    }
+
+    .hero-text {
+        text-align: left;
+
+        h1 {
+            justify-content: start;
+        }
+
+        .avatar {
+            height: 3.5rem;
+        }
+    }
+
+    .hero-buttons {
+        align-self: stretch;
+
+        a {
+            width: 100%;
+        }
+    }
+
+    .services-pills {
+        margin-block: var(--padding-block-father-container);
+    }
+
+    .about {
+        & .container {
+            h2 {
+                .avatar {
+                    width: 2.75rem;
+                    height: 2.75rem;
+                    margin-inline: 0.3125rem;
+                }
+            }
+        }
     }
 }
 
@@ -1262,27 +1320,19 @@ footer {
             }
         }
     }
-
-    .hero-text {
-        text-align: left;
-
-        h1 {
-            justify-content: start;
-        }
-    }
-
-    .hero-buttons {
-        align-self: stretch;
-
-        a {
-            width: 100%;
-        }
-    }
 }
 
 @media screen and (max-width: 452px) {
     .pill-avatar {
         h5 {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .button.cta {
+        div:last-of-type {
             display: none;
         }
     }
@@ -1340,6 +1390,7 @@ footer {
                     align-items: center;
                     justify-content: center;
                     height: auto;
+                    transform: translateX(-.75rem);
 
                     >div {
                         translate: 0;
@@ -1354,17 +1405,36 @@ footer {
                     }
                 }
             }
+
+            .bg-plan-card {
+                transform: translate(-12rem, -13rem);
+            }
+        }
+
+        .text-container-plan-card {
+            h3 {
+                background: none;
+                -webkit-background-clip: initial;
+                background-clip: initial;
+                color: var(--zero);
+            }
         }
     }
 
     .business {
-        & .main-container-plan-card {
+        .main-container-plan-card {
             &> :nth-of-type(1) {
                 order: initial;
             }
 
             &> :nth-of-type(2) {
                 order: initial;
+            }
+        }
+
+        .container-plan-card {
+            .bg-plan-card {
+                transform: translate(10rem, -13rem);
             }
         }
     }

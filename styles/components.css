@@ -3,7 +3,7 @@
     --url: url(/assets/icons/cv-file-document.svg);
 
     position: relative;
-    width: 1.5rem;
+    min-width: 1.5rem;
     aspect-ratio: 1/1;
     background: var(--color);
     -webkit-mask-image: var(--url);
@@ -123,7 +123,7 @@
     }
 
     .icon {
-        width: 2.25rem;
+        min-width: 2.25rem;
     }
 
     &.gray {
@@ -194,7 +194,7 @@
     }
 
     .icon {
-        width: 1.25rem;
+        min-width: 1.25rem;
     }
 
     &.gray {
@@ -349,7 +349,7 @@
 
     .icon {
         background: var(--color-icon);
-        width: 1.75rem;
+        min-width: 1.75rem;
     }
 }
 
