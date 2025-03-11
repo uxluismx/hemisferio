@@ -39,7 +39,7 @@
       <stop offset=".75" stop-color="#13DB7D" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="f" x1="330.072" x2="194.834" y1="172.211" y2="462.23" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#fff"/>
+      <stop stop-color="#D2C0F7"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="h" x1="385" x2="520.238" y1="476.128" y2="186.109" gradientUnits="userSpaceOnUse">
@@ -49,11 +49,11 @@
     </linearGradient>
     <linearGradient id="j" x1="336.547" x2="471.785" y1="467.917" y2="177.898" gradientUnits="userSpaceOnUse">
       <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="1" stop-color="#B9CCF9"/>
     </linearGradient>
     <linearGradient id="l" x1="288.547" x2="423.785" y1="539.917" y2="249.898" gradientUnits="userSpaceOnUse">
       <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="1" stop-color="#618EF1"/>
     </linearGradient>
     <linearGradient id="n" x1="188.667" x2="348.667" y1="433.07" y2="155.942" gradientUnits="userSpaceOnUse">
       <stop stop-color="#fff" stop-opacity="0"/>
