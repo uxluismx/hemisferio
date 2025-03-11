@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Incluir la URL de tu sitemap
+Sitemap: https://hemisferio.pro/sitemap.xml
