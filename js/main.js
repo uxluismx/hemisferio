@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // SCROLL SUAVE CUANDO SE HACE CLICK EN UN LINK DEL NAV
 document.addEventListener('DOMContentLoaded', () => {
     // Select all navigation containers that might contain links
-    const navContainers = document.querySelectorAll('.tabs-container, .navigation, nav');
+    const navContainers = document.querySelectorAll('.tabs-container, .navigation, nav, .hero-buttons');
 
     navContainers.forEach(container => {
         if (container) {
