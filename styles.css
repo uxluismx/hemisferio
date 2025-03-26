@@ -400,7 +400,7 @@ section {
 
 .row-big-pill {
     display: inline-flex;
-    width: 232rem;
+    width: max-content;
     gap: 1.5rem;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -415,7 +415,6 @@ section {
     &:nth-child(2) {
         --animation-speed: 120s;
         animation: scroll-right var(--animation-speed) linear infinite;
-        width: 192rem;
         align-self: flex-end;
     }
 }
